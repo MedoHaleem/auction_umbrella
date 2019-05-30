@@ -28,7 +28,8 @@ defmodule Auction.MixProject do
     [
       {:ecto_sql, "~> 3.1.3"},
       {:postgrex, "~> 0.14.3"},
-      {:uuid, "~> 1.1.8"}
+      {:comeonin, "~> 5.1"},
+      {:pbkdf2_elixir, "~> 1.0"}
       # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"},
       # {:sibling_app_in_umbrella, in_umbrella: true}
     ]
