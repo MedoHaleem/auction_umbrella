@@ -7,7 +7,7 @@ defmodule AuctionWeb.ItemController do
   end
 
   def show(conn, %{"id" => id}) do
-    item = Auction.get_item(id)
+    item = Auction.get_item_with_bids(id)
     render(conn, "show.html", item: item)
   end
 
