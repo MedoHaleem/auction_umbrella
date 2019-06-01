@@ -17,7 +17,7 @@
     <%= if @current_user do %>
       <h2>Place your bid!</h2>
 
-      <%= form_for @bid, item_bid_path(@conn, :create, @item), fn f -> %>
+      <%= form_for @bid, Routes.item_bid_path(@conn, :create, @item), fn f -> %>
         <%= if @bid.action do %>
           <div class="alert alert-danger">
             Unfortunately, there are errors in your
