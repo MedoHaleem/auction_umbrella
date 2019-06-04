@@ -25,7 +25,7 @@ config :auction_web, AuctionWeb.Endpoint,
 config :auction, Auction.Repo,
   database: "auction",
   username: "postgres",
-  password: "password",      
+  password: "password",
   hostname: "localhost",
   port: "5432"
 

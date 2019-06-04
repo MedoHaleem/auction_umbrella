@@ -60,7 +60,11 @@ defmodule Auction do
     |> @repo.preload(bids: [:user])
   end
 
-  def get_user_by_username_and_password(username, password) do
+  @doc """
+  Retrieves a User from the database matching the provided username and
+      password
+  """
+def get_user_by_username_and_password(username, password) do
     with user when not is_nil(user) <- @repo.get_by(User, %{username: username}),
          true <- Password.verify_with_hash(password, user.hashed_password) do
       user

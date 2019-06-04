@@ -5,3 +5,13 @@ use Mix.Config
 config :auction_web, AuctionWeb.Endpoint,
   http: [port: 4002],
   server: false
+
+config :auction, Auction.Repo,
+  username: "postgres",
+  password: "password",
+  database: "auction_test",
+  hostname: "localhost",
+  port: "5432",
+  pool: Ecto.Adapters.SQL.Sandbox
+
+config :logger, level: :warn

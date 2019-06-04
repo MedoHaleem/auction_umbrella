@@ -11,8 +11,13 @@ defmodule Auction.MixProject do
       lockfile: "../../mix.lock",
       elixir: "~> 1.8",
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
+      aliases: aliases()
     ]
+  end
+
+  defp aliases do
+    [test: ["ecto.create --quiet", "ecto.migrate", "test"]]
   end
 
   # Run "mix help compile.app" to learn about applications.
@@ -34,4 +39,5 @@ defmodule Auction.MixProject do
       # {:sibling_app_in_umbrella, in_umbrella: true}
     ]
   end
+
 end
